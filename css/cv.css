@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,3 +6,151 @@
     padding: 0;
 }
 
+body {
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    background-color: #f2f2f2;
+    color: #4a4a4a;
+    line-height: 1.4;
+    padding: 30px 15px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Главная страница в формате листа */
+.column-container {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+/* Левая боковая панель */
+.sidebar {
+    width: 32%;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Круглая аватарка в розовом круге */
+.sidebar .image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color:#84596B;
+    /* Розовый акцент */
+}
+
+/* Контактная информация и списки слева */
+.sidebar address ul,
+.sidebar article ul {
+    list-style: none;
+    font-style: normal;
+}
+
+.sidebar address li,
+.sidebar article li {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.sidebar address a,
+:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar address a:hover {
+    color:#84596B;
+}
+
+/* Заголовки левой колонки */
+.sidebar h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+/* Правый основной контент */
+main {
+    width: 68%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Имя и должность */
+
+main .head h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+main .head p {
+    font-size: 1.5rem;
+    color:#84596B;
+    /* Розовая подпись */
+    font-weight: 600;
+}
+
+/* Заголовки EXPERIENCE и EDUCATION */
+main h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color:#84596B;
+    /* Розовый цвет секций */
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Элементы опыта и образования */
+main article h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+/* Даты и место работы */
+main article .date {
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 0.3rem;
+    float: right;
+    
+}
+
+main article p {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    
+}
+
+/* Текст описания */
+main article .description {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+
+/* Мобильная адаптивность */
+@media (max-width: 650px) {
+    .column-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar,
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sidebar {
+        margin-bottom: 30px;
+    }
+}
