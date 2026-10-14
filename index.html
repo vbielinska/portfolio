@@ -1,10 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Violeta Bielinska Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
+    <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+    <header class="site-header" id="top">
+        <a class="brand" href="index.html">Logo</a>
+
+        <nav aria-label=""> <!--change aria label-->
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="hero">
+            <p class="eyebrow">Hello I'm</p>
+            <h1>Violeta Bielinska</h1>
+            <p class="hero__lead">Junior Software Developer based in Finland</p>
+            <a class="button button--primary" href="">My works!</a>
+            <a class="button button--primary" href="">Download my CV</a>
+            <img class="hero__image" src="" alt="">
+        </section>
+
+        <section class="about-section" id="about">
+            <h2>About me</h2>
+            <p>
+                I'm an aspiring developer studying at Keuda in Kerava, Finland. I'm currently learning web design,
+                programming, and other areas of software development. I speak English and Russian, and I'm doing my best
+                with Finnish.
+            </p>
+
+            <p>
+                This portfolio is a work in progress that I'll continue to develop as I learn new skills, work on
+                projects, and grow as a developer. Come along for the journey!
+            </p>
+
+            <h3>My main skills:</h3>
+            <div class="skill-list">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Git</div>
+            </div>
+
+        </section>
+
+        <section class="works-section" id="work">
+            <h2>My latest work</h2>
+            <div class="card-list">
+                <article class="card">
+                    <h3 class="card__title">1-st project</h3>
+                    <img class="card__image" src="" alt="">
+                    <p class="card__text">Description of project.</p>
+                    <a class="button" href="#">Read more</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Contact me</h2>
+            <form class="form" action="#" method="post">
+                <div class="form__row">
+                    <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+                    <div class="field"><label for="email">Email</label><input id="email" name="email" type="email"
+                            required></div>
+                </div>
+                <div class="field"><label for="message">Message</label><textarea id="message" name="message"></textarea>
+                </div>
+                <label class="check"><input name="terms" type="checkbox" required> Hyväksyn ehdot</label>
+                <button class="button button--primary" type="submit">Lähetä</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
