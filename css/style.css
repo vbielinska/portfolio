@@ -1,0 +1,493 @@
+/* 1. Design tokens: shared values keep the visual system consistent. */
+:root {
+    color-scheme: light;
+    --color-text: #111827;
+    --color-muted: #4b5563;
+    --color-line: #d1d5db;
+    --color-image-surface: #f3f4f6;
+    --color-input-border: #cbd5e1;
+
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-size-body: clamp(1rem, 0.35vw + 0.9rem, 1.125rem);
+    --font-size-heading: clamp(2rem, 3vw, 2.5rem);
+
+    --space-1: 0.5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-section: 4rem;
+
+    --content-width: 75rem;
+    --content-gutter: 90%;
+    --image-size: 15rem;
+}
+
+/* 2. Base styles: document-wide defaults, typography, and focus behavior. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    background: #fff;
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: 1.4;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+    margin-block-start: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+h1,
+h2 {
+    margin-block-end: var(--space-3);
+    font-size: var(--font-size-heading);
+    font-weight: 700;
+}
+
+h3 {
+    margin-block-end: var(--space-2);
+    font-size: 1.5rem;
+}
+
+h4 {
+    margin-block-end: var(--space-1);
+    font-size: 1.2rem;
+}
+
+p {
+    margin-block-end: var(--space-2);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 10;
+    top: var(--space-2);
+    left: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    background: #fff;
+    transform: translateY(calc(-100% - var(--space-2)));
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* 3. Shared page frame and navigation. */
+.site-header,
+#main-content,
+.site-footer {
+    width: min(var(--content-gutter), var(--content-width));
+    margin-inline: auto;
+}
+
+.site-header {
+    padding-block: var(--space-4);
+}
+
+.navigation,
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    justify-content: space-between;
+    gap: var(--space-5);
+}
+
+.site-name {
+    flex: 0 0 auto;
+}
+
+.nav-list {
+    flex-wrap: wrap;
+    gap: var(--space-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-content {
+    padding-block: var(--space-5) var(--space-section);
+}
+
+.site-footer {
+    padding-block: var(--space-4);
+    color: var(--color-muted);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* 4. Intro: Hero and About share two equal columns. */
+.intro-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--space-5);
+}
+
+.hero h1,
+.about h2 {
+    margin-block-end: var(--space-3);
+}
+
+.hero a {
+    font-weight: 700;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.hero img {
+    align-self: flex-start;
+    width: min(100%, var(--image-size));
+    margin: var(--space-3) 0;
+}
+
+.skills {
+    margin-block-start: var(--space-4);
+}
+
+.skill-group {
+    display: grid;
+    grid-template-columns: minmax(8rem, 1fr) minmax(0, 1.2fr);
+    align-items: baseline;
+    gap: var(--space-2);
+}
+
+.skill-group h4 {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+/* 5. Learning Journey: dates and events stay balanced around a centered axis. */
+.timeline-section,
+.projects,
+.contact {
+    margin-block-start: var(--space-section);
+}
+
+.timeline-section > p {
+    color: var(--color-muted);
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: var(--space-4);
+    margin: var(--space-5) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    position: absolute;
+    inset-block: 0;
+    left: 50%;
+    width: 1px;
+    background: var(--color-line);
+    content: "";
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2rem minmax(0, 1fr);
+    align-items: start;
+}
+
+.timeline-date {
+    grid-column: 1;
+    padding-inline-end: var(--space-3);
+    color: var(--color-muted);
+    text-align: right;
+}
+
+.timeline-divider {
+    z-index: 1;
+    grid-column: 2;
+    justify-self: center;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-block-start: 0.25rem;
+    border-radius: 50%;
+    background: var(--color-muted);
+}
+
+.timeline-content {
+    grid-column: 3;
+    padding-inline-start: var(--space-3);
+}
+
+.timeline-content h3 {
+    margin-block-end: var(--space-1);
+    font-size: 1.15rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+/* 6. Projects: category headings use a full row above their project entries. */
+.project-category {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    row-gap: var(--space-4);
+    margin-block: var(--space-4) var(--space-5);
+}
+
+.project-category h3,
+.project-category > p,
+.project-card {
+    grid-column: 1 / -1;
+}
+
+.project-category h3,
+.project-category > p {
+    margin: 0;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: var(--space-5);
+}
+
+.project-image {
+    width: min(100%, var(--image-size));
+    aspect-ratio: 1 / 1;
+    border-radius: 0.75rem;
+    background: var(--color-image-surface);
+    object-fit: cover;
+}
+
+.project-info h4 {
+    margin-block-end: var(--space-1);
+}
+
+.project-info p {
+    margin-block-end: var(--space-1);
+}
+
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-2);
+    margin-block: 0 var(--space-1);
+    padding: 0;
+    list-style: none;
+    font-style: italic;
+}
+
+.project-links {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.project-links a + a::before {
+    margin-inline: var(--space-2);
+    content: "·";
+}
+
+/* 7. Contact: information and a simple stacked form share equal columns. */
+.contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--space-5);
+}
+
+.contact-info h3 {
+    margin-block-end: var(--space-3);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contact-form {
+    display: grid;
+    align-content: start;
+    gap: var(--space-2);
+    width: 100%;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-input-border);
+    border-radius: 0.4rem;
+    color: inherit;
+    font: inherit;
+    background: #fff;
+}
+
+.form-field textarea {
+    min-height: 6rem;
+    resize: vertical;
+}
+
+.contact-form button {
+    justify-self: start;
+    margin-block-start: var(--space-1);
+    padding: 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    font-style: italic;
+    background: transparent;
+    cursor: pointer;
+}
+
+.contact-form button::after {
+    margin-inline-start: var(--space-2);
+    content: "→";
+    font-size: 1.25em;
+    font-style: normal;
+}
+
+/* 8. Responsive layout: preserve the same order and clear alignment. */
+@media (max-width: 48rem) {
+    .intro-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .project-card {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: var(--space-3);
+    }
+}
+
+@media (max-width: 40rem) {
+    .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .nav-list {
+        gap: var(--space-4);
+    }
+
+    .timeline {
+        gap: var(--space-4);
+    }
+
+    .timeline-item {
+        grid-template-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr);
+    }
+
+    .timeline-date {
+        padding-inline-end: var(--space-1);
+    }
+
+    .timeline-content {
+        padding-inline-start: var(--space-1);
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
