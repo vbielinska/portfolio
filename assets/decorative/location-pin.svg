@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <title>Location</title>
+  <path d="M24 42s14-13.1 14-25A14 14 0 0 0 10 17c0 11.9 14 25 14 25Z" stroke="#6D9FB8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="17" r="4.5" stroke="#6D9FB8" stroke-width="3"/>
+</svg>
