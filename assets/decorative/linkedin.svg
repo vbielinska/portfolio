@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <title>LinkedIn</title>
-  <rect x="7" y="7" width="34" height="34" rx="7" stroke="#242424" stroke-width="2.8"/>
-  <circle cx="16" cy="17" r="1.7" fill="#242424"/>
-  <path d="M16 22v12M23 34V22m0 5c0-3 1.7-5 4.5-5s4.5 2 4.5 5v7" stroke="#242424" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
