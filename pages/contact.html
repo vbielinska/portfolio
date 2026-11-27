@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Contact Violeta Bielinska about internship opportunities, collaborations, or projects.">
+  <meta name="theme-color" content="#fcfbf9">
+  <title>Contact — Violeta Bielinska</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/contact.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-wrap page-content">
+    <header class="page-heading">
+      <h1>Contact</h1>
+      <p>Feel free to get in touch — I’m open to internship opportunities or collaborations.</p>
+     <!--  <nav class="social-links" aria-label="Social profiles">
+        <a href="https://www.linkedin.com/in/violeta-bielinska/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/vbielinska" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav> -->
+    </header>
+
+    <section class="contact-layout">
+      <form class="contact-form" id="contact-form" data-recipient="violeta.bielinska@edu.keuda.fi">
+        <div class="contact-fields-row">
+          <label class="contact-field" for="name"><span>Full Name</span><input id="name" name="name" autocomplete="name" required></label>
+          <label class="contact-field" for="email"><span>Email Address</span><input id="email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label class="contact-field" for="message"><span>Message</span><textarea id="message" name="message" rows="4" required></textarea></label>
+        <button class="contact-submit" type="submit">Send message </button>
+        <p class="form-note" id="form-note" aria-live="polite">This opens a draft in your email app.</p>
+      </form>
+
+    </section>
+  
+  </main>
+</body>
+
+</html>

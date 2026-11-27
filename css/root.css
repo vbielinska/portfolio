@@ -1,10 +1,11 @@
 :root {
-  --color-page-background: #F8F7F4;
-  --color-card-background: #FFFDFC;
-  --color-primary-text: #242424;
-  --color-secondary-text: #686762;
-  --color-divider: #E7E4DE;
-  --color-blue-decoration: #6D9FB8;
-  --color-skills-background: #E3EEF3;
-  --color-link-hover: #527985;
+  --section-padding: clamp(1.5rem, 4vw, 3rem);
+  --color-page-background: #FCFBF9;
+  --color-card-background: #FFFFFF;
+  --color-accent-surface: #EAF0F1;
+  --color-soft-outline: #C8DADD;
+  --color-primary-text: #353C3E;
+  --color-secondary-text: #626A6D;
+  --color-blue-decoration: #9AB8C1;
+  --color-link-hover: #456D79;
 }

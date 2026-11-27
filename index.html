@@ -1,106 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="I'm Violeta, a software development student in Finland. Explore my projects, skills and learning journey.">
-    <meta name="author" content="Violeta">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="robots" content="index, follow">
-
-    <title>Violeta | Student Developer</title>
-    <link rel="icon" type="image/png" href="assets/projects/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Violeta Bielinska is a software development student in Finland, building web projects and looking for an internship.">
+  <meta name="theme-color" content="#fcfbf9">
+  <title>Violeta Bielinska — Portfolio</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header id="site-header" class="site-header">
-        <nav class="navigation" aria-label="Main navigation">
-            <a class="site-name" href="index.html">Portfolio</a>
-            <ul class="nav-list">
-                <li><a href="pages/about.html" target="_blank" rel="noopener noreferrer">About</a></li>
-                <li><a href="pages/projects.html" target="_blank" rel="noopener noreferrer">Projects</a></li>
-                <li><a href="pages/contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main id="main-content">
-        <section id="intro" class="intro">
-            <h1>Hello, world!</h1>
-            <p class="hero-intro">I am Violeta, a <br>student developer</p>
-            <address>Kerava, Finland</address>
-        </section>
-        <section id="avatar" class="avatar">
-            <img src="assets/projects/avatar.png" alt="Illustrated portrait of Violeta" height="200">
-        </section>
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <article class="project-card">
-                <div class="card-image">
-                    <img src="assets/projects/portfolio.png" alt="" height="200">
-                </div>
-                <div class="card-info">
-                    <h3>My portfolio</h3>
-                    <p>This site is my personal portfolio, built to showcase my work and learning journey.</p>
-                    <ul class="skill-list">
-                        <li class="skill">HTML</li>
-                        <li class="skill">CSS</li>
-                    </ul>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="card-image">
-                    <img src="assets/projects/discworld.png" alt="" height="200">
-                </div>
-                <div class="card-info">
-                    <h3>Discworld Atlas</h3>
-                    <p>A fan-made website dedicated to one of my
-                        favourite authors.</p>
-                    <ul class="skill-list">
-                        <li class="skill">HTML</li>
-                        <li class="skill">CSS</li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-        <section id="about" class="about">
-            <h2>About</h2>
-            <p>Small projects help me practise new skills,
-                and this site documents my learning journey.</p>
-            <p>Thanks for stopping by!</p>
-
-        </section>
-        <section id="contact" class="contact">
-            <h2>Get in touch</h2>
-            <p>Have a question, an opportunity, or just want to say hi?</p>
-            <p>I'd love to hear from you!</p>
-            <ul class="link-list">
-                <li><a href="mailto:violeta.bielinska@edu.keuda.fi" rel="noopener noreferrer">Email</a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/violeta-bielinska/" target="_blank"
-                        rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://github.com/vbielinska" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            </ul>
-        </section>
-        <section id="skills" class="skills">
-            <h2>Skills &amp; Tools</h2>
-            <ul class="skill-list">
-                <li class="skill">HTML</li>
-                <li class="skill">CSS</li>
-                <li class="skill">JavaScript</li>
-                <li class="skill">Git</li>
-                <li class="skill">GitHub</li>
-                <li class="skill">C#</li>
-                <li class="skill">Unity</li>
-            </ul>
-
-        </section>
-    </main>
-
+  <main id="main-content" class="page-wrap">
+    <section class="home-hero">
+        <div class="hero-copy">
+            <h1>Violeta Bielinska</h1>
+            <p class="hero-role">Software Development Student</p>
+            <p class="hero-description">Curious by nature, attentive to detail, and always eager to understand how things work.</p>
+            <p class="hero-location">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+                <span>Kerava, Finland</span>
+            </p>
+            <a class="resume-link" href="assets/resume/resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/images/portrait.jpg" alt="Portrait of Violeta Bielinska">
+        </figure>
+    </section>
+  </main>
 </body>
-
 </html>
